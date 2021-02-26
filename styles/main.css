@@ -1,0 +1,755 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext-Regular.woff2),
+       url(../fonts/AvenirNext-Regular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext-Medium.woff2),
+       url(../fonts/AvenirNext-Medium.woff);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext-DemiBold.woff2),
+       url(../fonts/AvenirNext-DemiBold.woff);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: AvenirNext;
+  src: url(../fonts/AvenirNext-Bold.woff2),
+       url(../fonts/AvenirNext-Bold.woff);
+  font-weight: 700;
+}
+
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-family: 'AvenirNext';
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 65px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 50px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 35px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+
+.button {
+  display: block;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 20px 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.button.is-primary {
+  color: #ffffff;
+  background-color: #3040C4;
+}
+
+.button.is-secondary  {
+  color: #3040C4;
+  background-color: #ffffff;
+
+}
+
+.button.is-outline  {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header {
+  padding: 30px 0;
+}
+
+.burger {
+  display: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EEF0FC;
+  padding-bottom: 10px;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+
+.main-nav ul li {
+  margin-left: 20px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000000;
+}
+
+.main-nav ul li:hover a {
+  color: #3040C4;
+}
+
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero {
+  margin: 80px auto;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero__desc {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  color: #2B292D;
+  max-width: 500px;
+}
+
+.hero__desc h1,
+.hero__desc p {
+  margin-bottom: 20px;
+}
+
+.hero__desc .button {
+  min-width: 200px;
+  align-self: baseline;
+  text-transform: capitalize;
+}
+
+.hero__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.meetYourMatch .container {
+  display: flex;
+  position: relative;
+  height: 850px
+}
+
+.meetYourMatch__background {
+  background-color: #EEF0FC;
+  width: 100%;
+  height: 512px;
+  border-radius: 20px;
+}
+
+.meetYourMatchــcontent {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  right: auto;
+  left: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.meetYourMatchــcontent h2 {
+  color: #2B292D;
+  margin-bottom: 20px;
+}
+
+.meetYourMatchــcontent form .switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.meetYourMatchــcontent form .switcher label {
+    margin: 0 10px;
+}
+
+.meetYourMatchــcontent form input[type="checkbox"] {
+  display: none;
+}
+
+.meetYourMatchــcontent form input[type="checkbox"]:checked + img{
+  border: 3px solid #3040C4;
+  width: 61px;
+  border-radius: 50%;
+}
+
+.meetYourMatchــcontent form .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.meetYourMatchــcontent form .form-group input[type="text"] {
+  width: 500px;
+  height: 64px;
+  padding: 16px;
+  padding-left: 10%;
+  border-radius: 40px;
+  border: 1px solid #3040C4;
+  outline: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  background-image: url('../images/map-pin.png');
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+}
+
+.meetYourMatchــcontent form .form-group input[type="text"]::placeholder {
+  color: #3040C4;
+  opacity: .5;
+}
+
+.meetYourMatchــcontent form .form-group .is-primary {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 180px;
+  outline: none;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults .widget .widget__image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults .widget {
+  background-color: #ffffff;
+  box-shadow: 5px 0px 50px rgb(0 0 0 / 5%),
+             -5px 0px 50px rgb(0 0 0 / 5%);
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults .widget .widget__desc {
+  padding: 20px;
+  text-transform: capitalize;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults .widget .widget__desc p {
+  margin-top: 8px;
+}
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+.howItWorks {
+  margin: 80px auto 200px;
+  text-align: center;
+}
+
+.howItWorks h2 {
+  color: #2B292D;
+  margin: 80px auto;
+}
+
+.howItWorks .widgets.is-howItWorks {
+  display: flex;
+  justify-content: space-around;
+}
+
+.howItWorks .widgets.is-howItWorks .widget {
+  margin: 0 40px;
+  width: 30%;
+}
+
+.howItWorks .widgets.is-howItWorks .widget .widget__desc {
+  margin-top: 20px;
+}
+
+.howItWorks .widgets.is-howItWorks .widget p {
+  margin-top:16px;
+  color: #5F5F80;
+}
+
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories {
+  background-color: #F6F6F9;
+  padding: 80px 0 160px;
+}
+
+.stories h2 {
+  color: #2B292D;
+  text-align: center;
+}
+
+.stories p {
+  color: #5F5F80;
+  margin: 20px auto 50px;
+  max-width: 650px;
+  text-align: center;
+}
+
+.stories .widgets {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stories .widgets .widget {
+  margin: 20px;
+}
+
+.stories .widgets .widget .widget__image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.stories .widgets .widget .widget__desc h3 {
+  margin: 16px 0 10px;
+}
+
+.stories .widgets .widget .widget__desc a.link {
+  text-decoration: none;
+  color: #3040C4;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+
+.actions {
+  background-color: #3040C4;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.actions h2 {
+  color: #ffffff;
+}
+
+.actions a.button {
+  display: inline-block;
+  min-width: 200px;
+  margin: 16px 8px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+
+footer {
+  padding: 120px 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container .copyrights {
+  flex-grow: 1;
+}
+
+footer .container .copyrights img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+footer .container .copyrights p {
+  font-size: 14px;
+}
+
+footer .container .copyrights a {
+  text-decoration: none;
+  color: #000000;
+}
+
+footer .container .footer-nav {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .container .footer-nav .item h5 {
+  margin-bottom: 24px;
+}
+
+footer .container .footer-nav .item ul li {
+  margin-top: 20px;
+}
+
+footer .container .footer-nav .item ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000000;
+}
+
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+
+  header .container {
+    border-bottom: none;
+  }
+
+  .hero .hero__desc h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .hero .hero__desc p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .hero__desc h1,
+  .hero__desc p {
+    margin-bottom: 16px;
+  }
+
+  .hero__desc {
+    margin-right: 16px;
+  }
+
+  .hero__image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .meetYourMatch .container {
+    height: 1280px
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    margin-top: 24px;
+  }
+
+  .howItWorks {
+    margin-bottom: 120px;
+  }
+
+  .howItWorks .widgets.is-howItWorks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .howItWorks .widgets.is-howItWorks .widget {
+    width: 50%;
+    margin-bottom: 80px;
+  }
+
+  .stories .widgets {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .stories .widgets .widget {
+    max-width: 44%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    padding: 1rem 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .burger div {
+    background-color: #000000;
+    width: 20px;
+    height: 3px;
+    margin-top: 3px;
+    position: relative;
+    transition: all .3s ease-in-out;
+  }
+
+  .burger.is-visible-mobile div:first-child {
+    transform: rotate(45deg);
+    top: 6px;
+  }
+
+  .burger.is-visible-mobile div:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .burger.is-visible-mobile div:nth-child(2) {
+    display: none;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+
+  .burger.is-visible-mobile + .main-nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger.is-visible-mobile + .main-nav ul li {
+    margin: 20px;
+  }
+
+  .hero {
+    margin: 40px auto 0;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hero__desc h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .hero__image {
+    margin-top: 20px;
+  }
+
+  .meetYourMatch {
+    margin-top: -2px;
+  }
+
+  .meetYourMatch .container {
+    margin-top: -2px;
+    height: 2500px
+  }
+
+  .meetYourMatch .container {
+    max-width: 100%;
+  }
+
+  .meetYourMatchــcontent h2 {
+    font-size: 24px;
+  }
+
+  .meetYourMatchــcontent form .form-group input[type="text"] {
+    width: 320px;
+    height: 58px;
+    font-size: 14px;
+    background-position: 3% 50%;
+  }
+
+  .meetYourMatchــcontent form .form-group .is-primary {
+    width: 114px;
+    font-size: 14px;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    margin-top: 20px;
+  }
+
+  .howItWorks {
+    margin-bottom: 120px;
+  }
+
+  .howItWorks .widgets.is-howItWorks {
+    flex-direction: column;
+    
+  }
+
+  .howItWorks .widgets.is-howItWorks .widget {
+    margin: 0 0 80px;
+    width: 100%;
+  }
+
+  .stories .widgets {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .actions {
+    padding: 60px 0;
+  }
+
+  .actions h2 {
+    font-size: 24px;
+  }
+
+  .actions a.button {
+    min-width: 150px;
+    height: 50px;
+    margin: 16px 2px;
+    font-weight: 600;
+  }
+
+  footer {
+    padding: 80px 0;
+  }
+
+  footer .container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .container .footer-nav {
+    margin-top: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  footer .container .footer-nav .item {
+    margin: 30px 10px;
+  
+  }
+}
