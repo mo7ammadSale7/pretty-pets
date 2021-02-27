@@ -234,10 +234,13 @@ header .container {
 .meetYourMatch .container {
   display: flex;
   position: relative;
-  height: 850px
 }
 
 .meetYourMatch__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   background-color: #EEF0FC;
   width: 100%;
   height: 512px;
@@ -245,16 +248,12 @@ header .container {
 }
 
 .meetYourMatchــcontent {
-  position: absolute;
-  width: 100%;
-  top: 50px;
-  right: auto;
-  left: auto;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  width: 100%;
+  z-index: 1;
+  padding: 80px 0 0;
 }
 
 .meetYourMatchــcontent h2 {
@@ -537,17 +536,13 @@ footer .container .footer-nav .item ul li a {
     max-height: 100%;
   }
 
-  .meetYourMatch .container {
-    height: 1280px
-  }
-
   .meetYourMatchــcontent .widgets.is-searchResults {
     flex-wrap: wrap;
     width: 100%;
   }
 
   .meetYourMatchــcontent .widgets.is-searchResults .widget {
-    margin-top: 24px;
+    margin: 24px;
   }
 
   .howItWorks {
@@ -662,7 +657,6 @@ footer .container .footer-nav .item ul li a {
 
   .meetYourMatch .container {
     margin-top: -2px;
-    height: 2500px
   }
 
   .meetYourMatch .container {
@@ -687,7 +681,7 @@ footer .container .footer-nav .item ul li a {
 
   .meetYourMatchــcontent .widgets.is-searchResults {
     display: flex;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 50px;
