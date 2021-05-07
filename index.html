@@ -64,12 +64,12 @@
                             <div class="switcher">
                                 <label for="dog">
                                     <input id="dog" name="animal_type" type="checkbox" />
-                                    <img src="images/pets/dog.png" alt="dog image">
+                                    <img src="./images/pets/dog.png" alt="dog image">
                                 </label>
                                 <span>or</span>
                                 <label for="cat">
                                     <input id="cat" name="animal_type" type="checkbox" />
-                                    <img src="images/pets/cat.png" alt="cat image">
+                                    <img src="./images/pets/cat.png" alt="cat image">
                                 </label>
                             </div>
                             <div class="form-group">
@@ -77,50 +77,10 @@
                                 <button class="button is-primary" type="submit">search</button>
                             </div>
                         </form>
-                        <div class="widgets is-searchResults">
-                            <div class="widget">
-                                <div class="widget__image">
-                                    <img src="images/pet-01.png" alt="pet image">
-                                </div>
-                                <div class="widget__desc">
-                                    <h4>Rocco</h4>
-                                    <p>Male | Young</p>
-                                    <p>Los Angeles CA</p>
-                                </div>
-                            </div>
-                            <div class="widget">
-                                <div class="widget__image">
-                                    <img src="images/pet-02.png" alt="pet image">
-                                </div>
-                                <div class="widget__desc">
-                                    <h4>Chanona</h4>
-                                    <p>Male | Young</p>
-                                    <p>Los Angeles CA</p>
-                                </div>
-                            </div>
-                            <div class="widget">
-                                <div class="widget__image">
-                                    <img src="images/pet-03.png" alt="pet image">
-                                </div>
-                                <div class="widget__desc">
-                                    <h4>Morio</h4>
-                                    <p>Male | Young</p>
-                                    <p>Los Angeles CA</p>
-                                </div>
-                            </div>
-                            <div class="widget">
-                                <div class="widget__image">
-                                    <img src="images/pet-04.png" alt="pet image">
-                                </div>
-                                <div class="widget__desc">
-                                    <h4>danio</h4>
-                                    <p>Male | Young</p>
-                                    <p>Los Angeles CA</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="widgets is-searchResults"></div>
                     </div>
                 </div>
+
             </section>
             <section class="howItWorks">
                 <div class="container">
@@ -159,42 +119,7 @@
                     </div>
                 </div>
             </section>
-            <section class="stories">
-                <div class="container">
-                    <h2>Featured Stories</h2>
-                    <p class="heading-paragraph">Together, we've helped save over 80K pets through adoption. Read
-                        amazing stories to see how adoption change the life of those people</p>
-                    <div class="widgets">
-                        <div class="widget">
-                            <div class="widget__image">
-                                <img src="images/stories/1.png" alt="graphic-image">
-                            </div>
-                            <div class="widget__desc">
-                                <h3>This is how I met Kori</h3>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                        <div class="widget">
-                            <div class="widget__image">
-                                <img src="images/stories/2.png" alt="graphic-image">
-                            </div>
-                            <div class="widget__desc">
-                                <h3>I can’t live without Nochi.</h3>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                        <div class="widget">
-                            <div class="widget__image">
-                                <img src="images/stories/3.png" alt="graphic-image">
-                            </div>
-                            <div class="widget__desc">
-                                <h3>My cat, My new friend!</h3>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section class="stories" id="stories"></section>
             <section class="actions">
                 <div class="container">
                     <h2>Change a Life, Adopt a Pet</h2>
@@ -246,6 +171,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
